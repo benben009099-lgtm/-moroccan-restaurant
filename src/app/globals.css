@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --bg-cream: #FAF6F0;
+  --bg-sand: #EFE8DC;
+  --cedar-deep: #0F291E;
+  --cedar-night: #0B1F17;
+  --gold-brass: #C89D54;
+  --terracotta: #B85338;
+  --text-charcoal: #14231B;
+  --text-olive: #526056;
+}
+
+body {
+  font-family: var(--font-jakarta), sans-serif;
+  background-color: #FAF6F0;
+  color: #14231B;
+}
+
+[dir="rtl"] body,
+[dir="rtl"] {
+  font-family: var(--font-cairo), var(--font-jakarta), sans-serif;
+}
+
+.font-serif-editorial {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+[dir="rtl"] .font-serif-editorial {
+  font-family: var(--font-cairo), serif;
+}
+
+.font-mono-price {
+  font-family: var(--font-jetbrains), monospace;
+}
+
+/* Subtle Moroccan Zellige geometric background pattern */
+.bg-zellige-subtle {
+  background-image: radial-gradient(#C89D54 0.65px, transparent 0.65px),
+    radial-gradient(#C89D54 0.65px, transparent 0.65px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Custom scrollbar for horizontal category bar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
